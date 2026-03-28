@@ -4,7 +4,7 @@ from config.config import BASE_URL, API_KEY
 
 class MovieAPI:
     headers = {
-        "X-API-KEY": API_KEY
+    "X-API-KEY": API_KEY if API_KEY else ""
     }
 
     @staticmethod
