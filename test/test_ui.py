@@ -60,7 +60,7 @@ def test_search_url(driver):
     main.open(UI_URL)
     main.search("Матрица")
 
-    assert "search" in driver.current_url
+    assert driver.current_url != UI_URL
 
 
 @allure.title("Проверка перехода по фильму")

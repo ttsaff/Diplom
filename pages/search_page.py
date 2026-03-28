@@ -1,15 +1,23 @@
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 class SearchPage:
-    MOVIE_ITEMS = (By.CSS_SELECTOR, ".search_results .element")
-    FIRST_MOVIE = (By.CSS_SELECTOR, ".search_results .element a")
+    RESULTS = (By.CSS_SELECTOR, "a[href*='/film/']")
 
     def __init__(self, driver):
         self.driver = driver
+        self.wait = WebDriverWait(driver, 15)
 
     def get_results_count(self) -> int:
-        return len(self.driver.find_elements(*self.MOVIE_ITEMS))
+        elements = self.wait.until(
+            EC.presence_of_all_elements_located(self.RESULTS)
+        )
+        return len(elements)
 
     def open_first_movie(self) -> None:
-        self.driver.find_element(*self.FIRST_MOVIE).click()
+        elements = self.wait.until(
+            EC.presence_of_all_elements_located(self.RESULTS)
+        )
+        elements[0].click()
