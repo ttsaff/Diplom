@@ -1,0 +1,5 @@
+selenium==4.36.0
+pytest 
+requests
+allure-pytest
+python-dotenv
