@@ -3,3 +3,5 @@ selenium
 requests
 allure-pytest
 python-dotenv
+certifi  # ✅ Для SSL поддержки на macOS
+urllib3>=1.26.0  # ✅ Для правильной работы с HTTPS
