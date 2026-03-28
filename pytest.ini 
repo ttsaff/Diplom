@@ -1,5 +1,0 @@
-[pytest]
-
-markers =
-    api: API tests
-    ui: UI tests

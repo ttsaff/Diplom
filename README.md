@@ -38,5 +38,13 @@ pytest -m ui
 pytest --alluredir=allure-results
 allure serve allure-results
 
+## 📖 Документация
+[Pytest маркеры](https://docs.pytest.org/en/latest/reference.html#marks)
+[Allure Framework](https://docs.qameta.io/allure/)
+[Selenium WebDriver](https://www.selenium.dev/documentation/)
+
 ## 📌 ССылка на отчет по ручному тестированию
 https://serovas.yonote.ru/share/05f7fd35-8476-4870-ad13-e3947150bdb5
+
+## Alure report
+https://disk.yandex.ru/d/MrhIKec4l4gxVw
